@@ -1,0 +1,40 @@
+.main {
+    background-color: #A03037;
+}
+
+.img {
+    margin-left: -100px;
+    margin-top: 10px;
+}
+
+.text {
+    color: #ffffff;
+    text-align: left;
+    font: normal normal normal 20px Roboto;
+}
+
+.search {
+    margin-left: 30px;
+    width: 550px;
+    height: 30px;
+    background: #FCFCFC;
+    border-radius: 3px;
+    opacity: 1;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.profile {
+    cursor: pointer;
+    font: normal normal normal 10px/13px Roboto;
+    letter-spacing: 0.45px;
+    color: #FFFFFF;
+}
+
+.cart {
+    cursor: pointer;
+    font: normal normal normal 10px/13px Roboto;
+    letter-spacing: 0.45px;
+    color: #FFFFFF;
+}

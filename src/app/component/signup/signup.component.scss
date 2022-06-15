@@ -1,0 +1,90 @@
+.main {
+    background-color: darkgray;
+    width: 100%;
+    height: 100%;
+}
+
+.img1 {
+    height: 245px;
+    width: 245px;
+    border-radius: 120px;
+    margin-left: 30px;
+}
+
+.text1 {
+    margin-top: 10px;
+    margin-left: 55px;
+}
+
+.card1 {
+    background-color: white;
+    border-radius: 21px;
+    height: 321px;
+    width: 374px;
+    margin-left: 70px;
+}
+
+.card2 {
+    background-color: white;
+    height: 370px;
+    width: 374px;
+    position: relative;
+    right: 6%;
+}
+
+.login {    
+    margin-left: -260px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #ffffff;
+    color: #878787;
+    cursor: pointer;
+}
+
+.name {
+    margin-top: 50px;
+    font-size: 12px;
+    margin-left: 30px;
+}
+
+.email {
+    margin-top: 120px;
+    font-size: 12px;
+    margin-left: -248px;
+}
+
+.password{
+    margin-top: 190px;
+    font-size: 12px;
+    margin-left: -250px;
+}
+
+.number{
+    margin-top: 260px;
+    font-size: 12px;
+    margin-left: -250px;
+}
+
+.signup1{
+    background-color: #A03037;
+    color:#ffffff;
+    border: none;
+    height: 35px;
+    width: 250px;
+    margin-left: -250px; 
+    margin-top: 330px;
+    cursor: pointer;
+}
+
+.Signup{
+    margin-left: -85px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #000000;
+    background-color: #ffffff;
+    font-weight:600;
+    cursor: pointer;
+}

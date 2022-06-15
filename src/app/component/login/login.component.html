@@ -1,0 +1,71 @@
+<div class="main" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="card1">
+        <img class="img1" src="../../../assets/login/2766594.png" style="margin-top: 30px;">
+       
+        <div class="text1">
+            <h2>ONLINE BOOK SHOPPING</h2>
+        </div>
+        
+    </mat-card>
+    <mat-card class="card2">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div fxLayout="row">
+                <div class="email">
+                    <p>
+                        <mat-form-field appearance="outline" style="width:250px">
+                            <mat-label>Email Id</mat-label>
+                            <input matInput placeholder="Email" formControlName="email">
+                        </mat-form-field>
+                    </p>
+                </div>
+
+                <div class="password">
+                    <p>
+                        <mat-form-field appearance="outline" style="width:250px">
+                            <mat-label>Password</mat-label>
+                            <input matInput placeholder="Password" formControlName="password">
+                        </mat-form-field>
+                    </p>
+                </div>
+
+                <div class="forgot">
+                    Forgot Password?
+                </div>
+
+                <div>
+                    <button class="login1">
+                        Login
+                    </button>
+                </div>
+
+                <div style="margin-top: 12px;">
+                    <button class="login" routerLink="/login">
+                        LOGIN
+                    </button>
+                </div>
+
+                <div class="text2">
+                    <h3>OR</h3>
+                </div>
+
+                <div>
+                    <button class="facebook" routerLink="/signup">
+                        Facebook
+                    </button>
+                </div>
+
+                <div>
+                    <button class="google" routerLink="/signup">
+                        Google
+                    </button>
+                </div>
+
+                <div>
+                    <button class="Signup" routerLink="/signup">
+                        SIGNUP
+                    </button>
+                </div>
+            </div>
+        </form>
+    </mat-card>
+</div>
