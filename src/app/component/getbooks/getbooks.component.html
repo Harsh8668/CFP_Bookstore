@@ -1,0 +1,75 @@
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<div class="container" fxLayoutAlign="center center">
+    <div class="main">
+
+        <div class="name">
+            Books
+            <span style="font-size: 13px; color:#000">(28 Items)</span>
+            <select class="sorting">
+                <option>
+                    Sort by relevance
+                </option>
+                <option>
+                    Price: Low to High
+                </option>
+                <option>
+                    Price: High to Low
+                </option>
+                <option>
+                    Newest Arrivals
+                </option>
+            </select>
+        </div><br><br>
+
+
+        <div class="book">
+
+            <mat-card *ngFor="let book of Books" style="width: 230px;height: 320px;">
+
+                <div class="img" fxLayoutAlign="center center" style="margin-top:-16px;width:262px;margin-left:-16px">
+                    <img src="../../../assets/getBook/Image 13.png">
+                </div><br><br>
+
+                <div class="name1">
+                    {{book.bookName}}
+                </div>
+
+                <div class="author">
+                    by {{book.author}}
+                </div>
+
+                <div class="star">
+                    4.5
+                    <span class="material-symbols-outlined" style="font-size:10px; color: #fff;">
+                        grade
+                    </span>
+
+                    <div class="quantity">
+                        ({{book.quantity}})
+                    </div>
+
+                </div>
+
+                <div class="price">
+                    Rs. {{book.price}}
+                </div>
+
+                <div class="discount">
+                    <del>Rs. {{book.discountPrice}}</del>
+                </div>
+
+                <div>
+                    <button class="adding" (click)="myCart(book)">
+                        ADD TO CART
+                    </button>
+                
+                    <button class="wish" style="margin-left: 10px;">
+                        WISHLIST
+                    </button>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

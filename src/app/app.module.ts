@@ -11,12 +11,19 @@ import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { GetbooksComponent } from './component/getbooks/getbooks.component';
+import { MyCartComponent } from './component/my-cart/my-cart.component';
+import { OrderComponent } from './component/order/order.component';
 
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 @NgModule({
@@ -25,7 +32,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     LoginComponent,
     SignupComponent,
     DashboardComponent,
-    GetbooksComponent
+    GetbooksComponent,
+    MyCartComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +48,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatFormFieldModule,
     MatCardModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatTableModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

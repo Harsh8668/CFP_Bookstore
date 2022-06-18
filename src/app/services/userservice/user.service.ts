@@ -1,3 +1,4 @@
+import { TOUCH_BUFFER_MS } from '@angular/cdk/a11y/input-modality/input-modality-detector';
 import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpService } from '../httpservice/http.service';
@@ -6,8 +7,10 @@ import { HttpService } from '../httpservice/http.service';
   providedIn: 'root'
 })
 export class UserService {
+token:any
 
-  constructor(private httpService:HttpService) { }
+  constructor(private httpService:HttpService) {
+   }
 
   registration(reqData: any) {
 

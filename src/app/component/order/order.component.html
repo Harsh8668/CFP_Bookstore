@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="main">
+        
+        <div class="img">
+            <img class="img" src="../../../assets/order/Screenshot (690).png">
+        </div>
+
+        <div class="name">
+            <p>Order Placed Successfully</p>
+        </div>
+
+        <div class="image">
+            <img class="image" src="../../../assets/order/Screenshot (692).png" alt="">
+        </div>
+
+        <div class="name1">
+            <p class="name2">hurray!!! your order is confirmed </p><br>
+            <p class="name3">the order id is #123456 save the order id for </p><br>
+           <p class="name4">further communication...</p>
+        </div>
+
+        <div class="table">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="email" >
+                  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Email us </th>
+                  <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.email}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="contact">
+                  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Contact us </th>
+                  <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.contact}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="address">
+                  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Address </th>
+                  <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.address}} </td>
+                </ng-container>
+                            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>                 
+        </div>
+
+        <div (click)="continue()">
+            <button class="continue" mat-button color="primary">Continue Shopping</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,179 @@
+<div class="container">
+    <div class="main">
+
+        <div class="heads">
+            <div class="head">
+                Home
+            </div>
+
+            <div class="head1">
+                / My cart
+            </div>
+        </div>
+
+        <div class="body">
+            <mat-card>
+                <div class="name">
+                    My Cart({{count}})
+                </div>
+
+                <div class="location" fxLayoutAlign=" center">
+                    <span class="material-symbols-outlined">
+                        pin_drop
+                    </span>
+                </div>
+
+                <div>
+                    <p style="font-size:14px;color: #0A0102; margin-left:530px;margin-top: -25px;">Ichalkaranji,
+                        Kolhapur</p>
+                </div>
+
+                <div class="cart" *ngFor="let cart of Carts">
+
+                    <div class="img">
+                        <img src="../../../assets/getBook/Image 13.png">
+                    </div>
+
+                    <div class="name1">
+                        {{cart.product_id.bookName}}
+                    </div>
+
+                    <div class="author">
+                        by {{cart.product_id.author}}
+                    </div>
+
+                    <div class="price">
+                        Rs. {{cart.product_id.price}}
+                    </div>
+
+                    <div class="discount">
+                        <del>Rs. {{cart.product_id.discountPrice}}</del>
+                    </div>
+
+                    <div class="plus">
+                        <button style="border-radius: 20px;">
+                            <span>+</span>
+                        </button>
+                    </div>
+
+                    <div class="number">
+                        <button style="background-color: white;border:none">
+                            <span>1</span>
+                        </button>
+                    </div>
+
+                    <div class="minus">
+                        <button style="border-radius: 20px;">
+                            <span>-</span>
+                        </button>
+                    </div>
+
+                    <div class="remove">
+                        <button (click)="remove(cart)">Remove</button>
+                    </div>
+
+                </div>
+
+                <div *ngIf="visible">
+                    <button class="order" (click)="order()">Place Order</button>
+                </div>
+            </mat-card>
+
+        </div>
+
+        <br>
+        <div class="main2" *ngIf="visible">
+            <mat-card>
+                Address Details
+            </mat-card>
+        </div>
+
+        <br>
+        <div class="main3" *ngIf="visible">
+            <mat-card>
+                Order Summary
+            </mat-card>
+        </div>
+
+        <br>
+        <div class="main4" *ngIf="valid">
+            <mat-card class="card3">
+
+                <div class="name4">
+                    Customer Details
+                </div>
+
+                <div class="address">
+                    <button
+                        style="border: none;outline: none;background-color: white;font-size: 15px;color: #A03737;margin-top: 5px;">Add
+                        new Address</button>
+                </div>
+
+                <div class="firstName">
+                    <p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Full Name</mat-label>
+                            <input matInput placeholder="Full Name">
+                        </mat-form-field>
+                    </p>
+                </div>
+
+                <div class="mobile">
+                    <p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Mobile Number</mat-label>
+                            <input matInput placeholder="Mobile Number">
+                        </mat-form-field>
+                    </p>
+                </div>
+
+                <div class="work">
+                    <span class="material-symbols-outlined" style="color: #A03737;font-size: 15px;">
+                        radio_button_checked
+                    </span>
+                    <p style="font-weight: 500;margin-left: 20px;margin-top: -23px;">1. WORK</p>
+                    <p style="font-weight: 500;margin-left: 83px;margin-top: -28px;font-size: 12px;color: #A03737;">EDIT</p>
+                </div>
+
+                <div class="address2">
+                    <p>
+                        <mat-form-field class="example-full-width" style="width:420px" appearance="fill">
+                          <mat-label>Address</mat-label>
+                          <textarea matInput></textarea>
+                        </mat-form-field>
+                      </p>
+                </div>
+
+                <div class="city">
+                    <p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>City/Town</mat-label>
+                            <input matInput placeholder="City / Town">
+                        </mat-form-field>
+                    </p>
+                </div>
+
+                <div class="state">
+                    <p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>State</mat-label>
+                            <input matInput placeholder="State">
+                        </mat-form-field>
+                    </p>
+                </div>
+
+                <div>
+                    <button class="continue" mat-raised-button color="primary">Continue</button>
+                </div>
+
+            </mat-card>
+        </div>
+
+        <div class="main5" *ngIf="valid">
+            <mat-card>
+                Order Summary
+            </mat-card>
+        </div>
+
+    </div>
+</div>
