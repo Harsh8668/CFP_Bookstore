@@ -3,26 +3,37 @@
 <div class="container">
     <mat-toolbar class="main">
         <mat-toolbar-row fxLayoutAlign="center center">
-            
-                <div class="img" (click)="home()">
-                    <img src="../../../assets/dashboard/education.png">
-                </div>
 
-                <div class="text" (click)="home()">
-                    <span>Bookstore</span>
-                </div>
-            
+            <div class="img" (click)="home()">
+                <img src="../../../assets/dashboard/education.png">
+            </div>
+
+            <div class="text" (click)="home()">
+                <span>Bookstore</span>
+            </div>
+
             <div>
                 <input type="text" class="search" placeholder="Search...">
             </div>
 
             <div class="icon">
                 <button class="material-symbols-outlined"
-                    style="border: none;margin-left: 120px; outline:none;background-color: #A03037;color: #ffffff;cursor: pointer;">
+                    style="margin-left:150px;border: none; outline:none;background-color: #A03037;color: #ffffff;cursor: pointer;">
                     person
-                    <div class="profile">Profile</div>
+                    <div class="wish">
+                        <button mat-button [matMenuTriggerFor]="menu"
+                            style="border: none; outline:none;background-color: #a03737;color: #ffffff;cursor: pointer;">profile</button>
+                        <mat-menu #menu="matMenu">
+                            <p style="font-size: 15px;margin-top:10px;margin-left: 10px;">Welcome</p>
+                            <hr>
+                            <button mat-menu-item (click)="myCart();">My Orders</button>
+                            <button mat-menu-item (click)="wishlist();">Wishlist</button>
+                            <button mat-menu-item (click)="Logout();">Logout</button>
+                        </mat-menu>
+                    </div>
                 </button>
             </div>
+
 
             <div class="icon" (click)="myCart();">
                 <button class="material-symbols-outlined"

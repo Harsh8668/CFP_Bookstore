@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
+
 export class DashboardComponent implements OnInit {
 
   constructor(private router:Router) { }
@@ -17,7 +18,16 @@ export class DashboardComponent implements OnInit {
     this.router.navigateByUrl("/home/cart");
   }
 
+  wishlist(){
+    this.router.navigateByUrl("/home/wishlist");
+  }
+
   home(){
     this.router.navigateByUrl("/home");
+  }
+
+  Logout(){
+    localStorage.removeItem("token")
+    this.router.navigateByUrl("/login")
   }
 }

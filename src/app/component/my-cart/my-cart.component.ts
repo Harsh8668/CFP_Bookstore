@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { BookService } from 'src/app/services/book/book.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/services/userservice/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-cart',
@@ -7,20 +11,55 @@ import { BookService } from 'src/app/services/book/book.service';
   styleUrls: ['./my-cart.component.scss']
 })
 export class MyCartComponent implements OnInit {
+  registerForm!: FormGroup;
+  submitted = false;
+  bookList:any;
   Carts: any;
-  count:any;
+  count: any;
   valid = false;
   visible = true;
-  noseen = true;
-  noshow = true;
+  show = true; 
+  close = false;
 
-  constructor(private book:BookService ) { }
-
-  ngOnInit(): void {
-    this.myCart();
+  openSnackBar() {
+    this._snackBar.open;
   }
 
-  myCart() {
+  constructor(private book: BookService, private _snackBar: MatSnackBar, private router:Router, private formBuilder: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.Cart();
+
+    this.registerForm = this.formBuilder.group({
+      fullName: ['', Validators.required],
+      phone: ['', [Validators.required, Validators.maxLength(10)]],
+      fullAddress: ['', Validators.required],
+      city: ['', Validators.required],
+      state: ['', Validators.required],
+    });
+  }
+
+  get f() { return this.registerForm.controls; }
+
+  onSubmit() {
+    this.submitted = true;
+
+    if (this.registerForm.valid) {
+
+      let reqdata = {
+        addressType: "Home",  
+        fullAddress: this.registerForm.value.fullAddress,
+        city: this.registerForm.value.city,
+        state: this.registerForm.value.state,
+      }
+      this.book.userAddress(reqdata).subscribe((response: any) => {
+        console.log(response);
+      this._snackBar.open('Customer Detail updated', '', { duration: 2000 });
+      });
+    }
+  }
+
+  Cart() {
     this.book.getAllCart().subscribe((response: any) => {
       this.Carts = response.result;
       this.count = response.result.length;
@@ -28,15 +67,24 @@ export class MyCartComponent implements OnInit {
     });
   }
 
-  remove(cart:any){
-    this.book.removeFromCart(cart._id).subscribe((response: any) =>{
+  remove(cart: any) {
+    this.book.removeFromCart(cart._id).subscribe((response: any) => {
       console.log(response);
+      this._snackBar.open('Book Removed', '', { duration: 2000 });
     });
   }
 
-  order(){
+  order() {
     this.visible = false;
     this.valid = true;
-    this.noseen = true;
+  }
+
+  continue(){
+    this.show = true;
+    this.close = true;
+  }
+
+  checkout(){
+    this.router.navigateByUrl("/home/order");
   }
 }

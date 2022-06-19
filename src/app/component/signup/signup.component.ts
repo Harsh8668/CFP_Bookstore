@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
     this._snackBar.open;
   }
 
-  constructor(private formBuilder: FormBuilder, private user:UserService,private _snackBar : MatSnackBar) { }
+  constructor(private formBuilder: FormBuilder, private user:UserService, private _snackBar : MatSnackBar) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({

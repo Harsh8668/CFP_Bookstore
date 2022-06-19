@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="plus">
-                        <button style="border-radius: 20px;">
+                        <button>
                             <span>+</span>
                         </button>
                     </div>
@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="minus">
-                        <button style="border-radius: 20px;">
+                        <button>
                             <span>-</span>
                         </button>
                     </div>
@@ -109,71 +109,87 @@
                         new Address</button>
                 </div>
 
-                <div class="firstName">
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>Full Name</mat-label>
-                            <input matInput placeholder="Full Name">
-                        </mat-form-field>
-                    </p>
-                </div>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="firstName">
+                        <p>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Full Name</mat-label>
+                                <input matInput placeholder="Full Name" formControlName="fullName">
+                            </mat-form-field>
+                        </p>
+                    </div>
 
-                <div class="mobile">
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>Mobile Number</mat-label>
-                            <input matInput placeholder="Mobile Number">
-                        </mat-form-field>
-                    </p>
-                </div>
+                    <div class="mobile">
+                        <p>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Mobile Number</mat-label>
+                                <input matInput placeholder="Mobile Number" formControlName="phone">
+                            </mat-form-field>
+                        </p>
+                    </div>
 
-                <div class="work">
-                    <span class="material-symbols-outlined" style="color: #A03737;font-size: 15px;">
-                        radio_button_checked
-                    </span>
-                    <p style="font-weight: 500;margin-left: 20px;margin-top: -23px;">1. WORK</p>
-                    <p style="font-weight: 500;margin-left: 83px;margin-top: -28px;font-size: 12px;color: #A03737;">EDIT</p>
-                </div>
+                    <div class="work">
+                        <span class="material-symbols-outlined" style="color: #A03737;font-size: 15px;">
+                            radio_button_checked
+                        </span>
+                        <p style="font-weight: 500;margin-left: 20px;margin-top: -23px;">1. WORK</p>
+                        <p style="font-weight: 500;margin-left: 83px;margin-top: -28px;font-size: 12px;color: #A03737;">
+                            EDIT</p>
+                    </div>
 
-                <div class="address2">
-                    <p>
-                        <mat-form-field class="example-full-width" style="width:420px" appearance="fill">
-                          <mat-label>Address</mat-label>
-                          <textarea matInput></textarea>
-                        </mat-form-field>
-                      </p>
-                </div>
+                    <div class="address2">
+                        <p>
+                            <mat-form-field class="example-full-width" style="width:420px" appearance="fill">
+                                <mat-label>Address</mat-label>
+                                <textarea matInput formControlName="fullAddress"></textarea>
+                            </mat-form-field>
+                        </p>
+                    </div>
 
-                <div class="city">
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>City/Town</mat-label>
-                            <input matInput placeholder="City / Town">
-                        </mat-form-field>
-                    </p>
-                </div>
+                    <div class="city">
+                        <p>
+                            <mat-form-field appearance="outline">
+                                <mat-label>City/Town</mat-label>
+                                <input matInput placeholder="City / Town" formControlName="city">
+                            </mat-form-field>
+                        </p>
+                    </div>
 
-                <div class="state">
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>State</mat-label>
-                            <input matInput placeholder="State">
-                        </mat-form-field>
-                    </p>
-                </div>
+                    <div class="state">
+                        <p>
+                            <mat-form-field appearance="outline">
+                                <mat-label>State</mat-label>
+                                <input matInput placeholder="State" formControlName="state">
+                            </mat-form-field>
+                        </p>
+                    </div>
 
-                <div>
-                    <button class="continue" mat-raised-button color="primary">Continue</button>
-                </div>
-
+                    <div *ngIf="valid">
+                        <div *ngIf="show">
+                            <button class="continue" (click)="continue();" mat-raised-button  >Continue</button>
+                        </div>
+                    </div>
+                </form>
             </mat-card>
         </div>
+        <br><br>
 
-        <div class="main5" *ngIf="valid">
-            <mat-card>
+        <div class="main5" *ngIf="valid" style="border: 1px solid white">
+            <mat-card *ngIf="close">
                 Order Summary
+                <div class="images">
+                    <img src="../.../../../../assets/getBook/Image 13@2x.png" alt="">
+                </div>
+
+                <div class="checkout" (click)="checkout()">
+                    <button>
+                        Check Out
+                    </button>
+                </div>
             </mat-card>
         </div>
 
     </div>
 </div>
+
+<br><br>

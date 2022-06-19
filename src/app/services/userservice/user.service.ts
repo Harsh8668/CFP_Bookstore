@@ -7,16 +7,16 @@ import { HttpService } from '../httpservice/http.service';
   providedIn: 'root'
 })
 export class UserService {
-token:any
+  token: any
 
-  constructor(private httpService:HttpService) {
-   }
+  constructor(private httpService: HttpService) {
+  }
 
   registration(reqData: any) {
 
     let header = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json'  
+        'Content-Type': 'application/json'
       })
     }
     return this.httpService.postService('/registration', reqData, false, header)
@@ -26,9 +26,11 @@ token:any
 
     let header = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json'  
+        'Content-Type': 'application/json'
       })
     }
     return this.httpService.postService('/login', reqData, false, header)
   }
+
+  
 }

@@ -12,6 +12,7 @@ import { UserService } from 'src/app/services/userservice/user.service';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   submitted = false;
+  users = '1';
 
   openSnackBar() {
     this._snackBar.open;
@@ -24,6 +25,8 @@ export class LoginComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
+    localStorage.setItem('SeesionUser',this.users)  
+
   }
 
   get f() { return this.loginForm.controls; }

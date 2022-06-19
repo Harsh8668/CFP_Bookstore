@@ -32,4 +32,11 @@ openSnackBar() {
       this._snackBar.open('Added to Cart', '', { duration: 2000 });
     });
   }
+
+  wishlist(book:any){
+    this.book.addBookTowishlist(book._id).subscribe((response:any)=>{
+      console.log(response);
+      this._snackBar.open('Added to Wishlist', '', { duration: 2000 });
+    });
+  }
 }

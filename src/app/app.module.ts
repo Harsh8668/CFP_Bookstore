@@ -13,6 +13,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { GetbooksComponent } from './component/getbooks/getbooks.component';
 import { MyCartComponent } from './component/my-cart/my-cart.component';
 import { OrderComponent } from './component/order/order.component';
+import { WishlistComponent } from './component/wishlist/wishlist.component';
 
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
@@ -23,7 +24,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import {MatRadioModule} from '@angular/material/radio';
+import {MatMenuModule} from '@angular/material/menu';
+import { AuthenticationServiceService } from './services/Authentication/authentication-service.service';
 
 
 @NgModule({
@@ -34,7 +37,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     DashboardComponent,
     GetbooksComponent,
     MyCartComponent,
-    OrderComponent
+    OrderComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
@@ -52,9 +56,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatExpansionModule,
     MatSelectModule,
     MatTableModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatRadioModule,
+    MatMenuModule
   ],
-  providers: [],
+  providers: [
+    AuthenticationServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
