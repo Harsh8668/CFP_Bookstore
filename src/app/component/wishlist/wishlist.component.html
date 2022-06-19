@@ -16,30 +16,29 @@
                 <div class="name">
                     My Wishlist({{count}})
                 </div>
-                <div class="cart" *ngFor="let wish of Wish">
+                <div class="cart" *ngFor="let wish of Wish" style="height: 140px;">
 
-                    <div class="img">
+                    <div class="img" style="margin-top:50px;">
                         <img src="../../../assets/getBook/Image 13.png">
                     </div>
-                    <br><br>
 
-                    <div class="name1">
+                    <div class="name1" style="margin-top:-130px;margin-left: 120px;">
                         {{wish.product_id.bookName}}
                     </div>
 
-                    <div class="author">
+                    <div class="author" style="margin-top:10px;margin-left: 120px;">
                         by {{wish.product_id.author}}
                     </div>
 
-                    <div class="price">
+                    <div class="price" style="margin-top:10px;margin-left: 120px;">
                         Rs. {{wish.product_id.price}}
                     </div>
 
-                    <div class="discount">
+                    <div class="discount" style="margin-top:10px;margin-left: 120px;">
                         <del>Rs. {{wish.product_id.discountPrice}}</del>
                     </div>
 
-                    <div class="remove" style="margin-top: -20px;">
+                    <div class="remove" style="cursor: pointer;margin-top: -30px;">
                         <span (click)="removes(wish)" class="material-symbols-outlined">
                             delete
                         </span>

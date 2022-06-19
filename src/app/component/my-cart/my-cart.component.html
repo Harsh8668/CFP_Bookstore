@@ -166,7 +166,7 @@
 
                     <div *ngIf="valid">
                         <div *ngIf="show">
-                            <button class="continue" (click)="continue();" mat-raised-button  >Continue</button>
+                            <button class="continue" (click)="continue();" mat-raised-button>Continue</button>
                         </div>
                     </div>
                 </form>
@@ -174,21 +174,43 @@
         </div>
         <br><br>
 
-        <div class="main5" *ngIf="valid" style="border: 1px solid white">
-            <mat-card *ngIf="close">
-                Order Summary
-                <div class="images">
-                    <img src="../.../../../../assets/getBook/Image 13@2x.png" alt="">
-                </div>
+        <div *ngIf="valid">
+            <div class="main5" *ngIf="close" style="border: 1px solid white">
+                <mat-card>
+                    <p style="margin-left:52px">Order Summary</p>
+                    <div *ngFor="let cart of Carts">
+                        <div class="img" style="margin-top:50px;margin-left: 50px;">
+                            <img src="../../../assets/getBook/Image 13.png">
+                        </div>
 
-                <div class="checkout" (click)="checkout()">
-                    <button>
-                        Check Out
-                    </button>
-                </div>
-            </mat-card>
+                        <div class="name1" style="margin-top:-130px;margin-left: 180px;">
+                            {{cart.product_id.bookName}}
+                        </div>
+
+                        <div class="author" style="margin-top:10px;margin-left: 180px;">
+                            by {{cart.product_id.author}}
+                        </div>
+
+                        <div class="price" style="margin-top:10px;margin-left: 180px;">
+                            Rs. {{cart.product_id.price}}
+                        </div>
+
+                        <div class="discount" style="margin-top:10px;margin-left: 180px;">
+                            <del>Rs. {{cart.product_id.discountPrice}}</del>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    
+                    <div (click)="orderPlace()">
+                        <button class="checkout" mat-raised-button>
+                            Check Out
+                        </button>
+                    </div>
+
+                </mat-card>
+            </div>
         </div>
-
     </div>
 </div>
 

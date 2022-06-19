@@ -13,19 +13,22 @@ import { Router } from '@angular/router';
 export class MyCartComponent implements OnInit {
   registerForm!: FormGroup;
   submitted = false;
-  bookList:any;
+  bookList: any;
   Carts: any;
   count: any;
   valid = false;
   visible = true;
-  show = true; 
+  show = true;
   close = false;
+  orders: any = [];
+  orderList: any = [];
+
 
   openSnackBar() {
     this._snackBar.open;
   }
 
-  constructor(private book: BookService, private _snackBar: MatSnackBar, private router:Router, private formBuilder: FormBuilder) { }
+  constructor(private book: BookService, private _snackBar: MatSnackBar, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.Cart();
@@ -47,14 +50,14 @@ export class MyCartComponent implements OnInit {
     if (this.registerForm.valid) {
 
       let reqdata = {
-        addressType: "Home",  
+        addressType: "Home",
         fullAddress: this.registerForm.value.fullAddress,
         city: this.registerForm.value.city,
         state: this.registerForm.value.state,
       }
       this.book.userAddress(reqdata).subscribe((response: any) => {
         console.log(response);
-      this._snackBar.open('Customer Detail updated', '', { duration: 2000 });
+        this._snackBar.open('Customer Detail updated', '', { duration: 2000 });
       });
     }
   }
@@ -79,12 +82,32 @@ export class MyCartComponent implements OnInit {
     this.valid = true;
   }
 
-  continue(){
+  continue() {
     this.show = true;
     this.close = true;
   }
 
-  checkout(){
-    this.router.navigateByUrl("/home/order");
+  placeOrder() {
+    this.orders.forEach((response: any) => {
+      this.orders.push({
+        "product_id": response.product_id._id,
+        "product_name": response.product_id.bookName,
+        "product_quantity": response.quantityToBuy,
+        "product_price": response.product_id.price
+      });
+    });
+    console.log(this.orders);
+
+    let reqdata = {
+      "place": this.orders
+    }
+    this.book.checkout(reqdata).subscribe((response: any) => {
+      console.log(response);
+    })
+  }
+  
+  orderPlace() {
+    this.router.navigateByUrl("/home/order")
   }
 }
+
