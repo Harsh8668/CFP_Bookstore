@@ -17,14 +17,15 @@
                     My Cart({{count}})
                 </div>
 
-                <div class="location" fxLayoutAlign=" center">
+                <div class="location" fxLayoutAlign=" center" fxHide.xs>
                     <span class="material-symbols-outlined">
                         pin_drop
                     </span>
                 </div>
 
                 <div>
-                    <p style="font-size:14px;color: #0A0102; margin-left:530px;margin-top: -25px;">Ichalkaranji,
+                    <p fxHide.xs style="font-size:14px;color: #0A0102; margin-left:530px;margin-top: -25px;">
+                        Ichalkaranji,
                         Kolhapur</p>
                 </div>
 
@@ -83,19 +84,20 @@
 
         <br>
         <div class="main2" *ngIf="visible">
-            <mat-card>
+            <mat-card class="card21">
                 Address Details
             </mat-card>
         </div>
 
         <br>
         <div class="main3" *ngIf="visible">
-            <mat-card>
+            <mat-card class="card31">
                 Order Summary
             </mat-card>
         </div>
 
         <br>
+        
         <div class="main4" *ngIf="valid">
             <mat-card class="card3">
 
@@ -103,7 +105,7 @@
                     Customer Details
                 </div>
 
-                <div class="address">
+                <div class="address" fxHide.xs>
                     <button
                         style="border: none;outline: none;background-color: white;font-size: 15px;color: #A03737;margin-top: 5px;">Add
                         new Address</button>
@@ -112,7 +114,7 @@
                 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                     <div class="firstName">
                         <p>
-                            <mat-form-field appearance="outline">
+                            <mat-form-field class="FN" appearance="outline">
                                 <mat-label>Full Name</mat-label>
                                 <input matInput placeholder="Full Name" formControlName="fullName">
                             </mat-form-field>
@@ -121,14 +123,14 @@
 
                     <div class="mobile">
                         <p>
-                            <mat-form-field appearance="outline">
+                            <mat-form-field class="MN" appearance="outline">
                                 <mat-label>Mobile Number</mat-label>
                                 <input matInput placeholder="Mobile Number" formControlName="phone">
                             </mat-form-field>
                         </p>
                     </div>
 
-                    <div class="work">
+                    <div class="work" fxHide.xs>
                         <span class="material-symbols-outlined" style="color: #A03737;font-size: 15px;">
                             radio_button_checked
                         </span>
@@ -137,18 +139,18 @@
                             EDIT</p>
                     </div>
 
-                    <div class="address2">
-                        <p>
-                            <mat-form-field class="example-full-width" style="width:420px" appearance="fill">
+                    <div class="address2"> 
+                        <p class="add">
+                            <mat-form-field  style="width: 340px;" appearance="outline">
                                 <mat-label>Address</mat-label>
-                                <textarea matInput formControlName="fullAddress"></textarea>
+                                <input matInput placeholder="Address" formControlName="fullAddress">
                             </mat-form-field>
                         </p>
                     </div>
 
                     <div class="city">
                         <p>
-                            <mat-form-field appearance="outline">
+                            <mat-form-field class="CT" appearance="outline">
                                 <mat-label>City/Town</mat-label>
                                 <input matInput placeholder="City / Town" formControlName="city">
                             </mat-form-field>
@@ -157,7 +159,7 @@
 
                     <div class="state">
                         <p>
-                            <mat-form-field appearance="outline">
+                            <mat-form-field class="ST" appearance="outline">
                                 <mat-label>State</mat-label>
                                 <input matInput placeholder="State" formControlName="state">
                             </mat-form-field>
@@ -176,32 +178,32 @@
 
         <div *ngIf="valid">
             <div class="main5" *ngIf="close" style="border: 1px solid white">
-                <mat-card>
-                    <p style="margin-left:52px">Order Summary</p>
+                <mat-card class="card10">
+                    <p class="summary" style="margin-left:12px">Order Summary</p>
                     <div *ngFor="let cart of Carts">
-                        <div class="img" style="margin-top:50px;margin-left: 50px;">
+                        <div class="img1" style="margin-top:50px;margin-left: 12px;">
                             <img src="../../../assets/getBook/Image 13.png">
                         </div>
 
-                        <div class="name1" style="margin-top:-130px;margin-left: 180px;">
+                        <div class="name1" style="margin-top:-130px;margin-left: 150px;">
                             {{cart.product_id.bookName}}
                         </div>
 
-                        <div class="author" style="margin-top:10px;margin-left: 180px;">
+                        <div class="author" style="margin-top:10px;margin-left: 150px;">
                             by {{cart.product_id.author}}
                         </div>
 
-                        <div class="price" style="margin-top:10px;margin-left: 180px;">
+                        <div class="price" style="margin-top:10px;margin-left: 150px;">
                             Rs. {{cart.product_id.price}}
                         </div>
 
-                        <div class="discount" style="margin-top:10px;margin-left: 180px;">
+                        <div class="discount" style="margin-top:10px;margin-left: 150px;">
                             <del>Rs. {{cart.product_id.discountPrice}}</del>
                         </div>
                     </div>
 
                     <br><br>
-                    
+
                     <div (click)="orderPlace()">
                         <button class="checkout" mat-raised-button>
                             Check Out
@@ -214,4 +216,6 @@
     </div>
 </div>
 
-<br><br>
+<footer class="footer" fxLayoutAlign="center center">
+    Copyright &copy; 2020. Bookstore Private Limited. All Rights Reserved.
+</footer>

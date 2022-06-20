@@ -66,3 +66,45 @@ footer {
     color: #ffffff;
     font: normal normal medium 12px/15px Lato;
 }
+
+@media (max-width:400px){
+    .container{
+        width:390px;
+    }
+
+    .img{
+        margin-top: 30px;
+        margin-left: 55px;
+    }
+
+    .name{
+        margin-top: 5px;
+        margin-left: 70px;
+    }
+
+    .image{
+        margin-top: 5px;
+        margin-left: 55px;
+    }
+
+    .name1{
+        margin-top: 5px;
+        margin-left: 50px;
+    }
+
+    .mat-elevation-z8{
+        width: 370px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    .continue{
+        margin-top: 20px;
+        margin-left: 110px;
+    }
+
+    .footer{
+        margin-top: 198px;
+        font-size: 13px;
+    }
+}

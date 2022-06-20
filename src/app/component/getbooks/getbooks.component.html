@@ -4,29 +4,25 @@
 <div class="container" fxLayoutAlign="center center">
     <div class="main">
 
-        <div class="name">
+        <div class="name" fxLayoutAlign="center center">
             Books
-            <span style="font-size: 13px; color:#000">(28 Items)</span>
-            <select class="sorting">
-                <option>
-                    Sort by relevance
-                </option>
-                <option>
-                    Price: Low to High
-                </option>
-                <option>
-                    Price: High to Low
-                </option>
-                <option>
-                    Newest Arrivals
-                </option>
-            </select>
+            <span style="font-size: 13px; color:#000">(28)</span>
+            <mat-form-field appearance="outline" class="sorting">
+                <mat-label>Sort by relevence</mat-label>
+                <mat-select>
+                    <mat-option (click)=" low()">Low to High </mat-option>
+                    <mat-option (click)=" high()">High to low</mat-option>
+                    <mat-option>Newest Arrivals</mat-option>
+                </mat-select>
+            </mat-form-field>
         </div><br><br>
 
 
         <div class="book">
 
-            <mat-card *ngFor="let book of Books | filter: searchWord" style="width: 270px;height: 320px;">
+            <mat-card
+                *ngFor="let book of Books | filter: searchWord | paginate: { itemsPerPage: 4, currentPage: page}"
+                style="width: 270px;height: 320px;">
 
                 <div class="img" fxLayoutAlign="center center" style="margin-top:-16px;width:302px;margin-left:-16px">
                     <img src="../../../assets/getBook/Image 13.png">
@@ -60,7 +56,7 @@
                     <del>Rs. {{book.discountPrice}}</del>
                 </div>
 
-                <div>
+                <div fxlayoutalign="center center">
                     <button class="adding" (click)="myCart(book)">
                         ADD TO CART
                     </button>
@@ -73,3 +69,12 @@
         </div>
     </div>
 </div>
+<br>
+<div fxLayoutAlign="center center">
+    <pagination-controls class="paging my-pagination" (pageChange)="page = $event"></pagination-controls>
+</div>
+
+<br><br>
+<footer class="footer" fxLayoutAlign="center center">
+    <p>Copyright &copy; 2020, Bookstore Private Limited. All Rights Reserved</p>
+</footer>

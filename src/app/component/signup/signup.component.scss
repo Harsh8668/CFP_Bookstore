@@ -88,3 +88,13 @@
     font-weight:600;
     cursor: pointer;
 }
+
+@media (max-width:400px){
+    .main{
+        width: 390px;
+    }
+
+    .card2{
+        margin-left: 45px;
+    }
+}

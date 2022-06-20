@@ -13,6 +13,7 @@ Books:any;
 subscription:any;
 message:any;
 searchWord:any;
+page:number =1;
 
 openSnackBar() {
   this._snackBar.open;
@@ -25,7 +26,6 @@ openSnackBar() {
     this.message = message;
     console.log("display card search data======", message.data[0]);
     this.searchWord=message.data[0]
-    // this.getAllNotes();
   })
 }
 
@@ -48,5 +48,13 @@ openSnackBar() {
       console.log(response);
       this._snackBar.open('Added to Wishlist', '', { duration: 2000 });
     });
+  }
+
+  high(){
+    this.Books = this.Books.sort((low: any, high: any) => high.price - low.price);
+  }
+
+  low(){
+    this.Books = this.Books.sort((low: any, high: any) => low.price - high.price);
   }
 }

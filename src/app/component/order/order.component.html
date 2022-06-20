@@ -1,25 +1,25 @@
 <div class="container">
-    <div class="main">
+    <div class="main" fxlayoutalign="center center">
         
-        <div class="img">
+        <div class="img" fxlayoutalign="center center">
             <img class="img" src="../../../assets/order/Screenshot (690).png">
         </div>
 
-        <div class="name">
+        <div class="name" fxlayoutalign="center center">
             <p>Order Placed Successfully</p>
         </div>
 
-        <div class="image">
+        <div class="image" fxlayoutalign="center center">
             <img class="image" src="../../../assets/order/Screenshot (692).png" alt="">
         </div>
 
-        <div class="name1">
+        <div class="name1" fxlayoutalign="center center">
             <p class="name2">hurray!!! your order is confirmed </p><br>
             <p class="name3">the order id is #123456 save the order id for </p><br>
            <p class="name4">further communication...</p>
         </div>
 
-        <div class="table">
+        <div class="table" fxlayoutalign="center center">
             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
                 <ng-container matColumnDef="email" >
@@ -28,7 +28,7 @@
                 </ng-container>
               
                 <ng-container matColumnDef="contact">
-                  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Contact us </th>
+                  <th mat-header-cell *matHeaderCellDef style="text-align: center"> Contact us </th>
                   <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.contact}} </td>
                 </ng-container>
               
@@ -42,12 +42,12 @@
               </table>                 
         </div>
 
-        <div (click)="continue()">
+        <div (click)="continue()" fxlayoutalign="center center">
             <button class="continue" mat-button color="primary">Continue Shopping</button>
         </div>
     </div>
 </div>
 
-<footer fxLayoutAlign="center center">
+<footer class="footer" fxLayoutAlign="center center">
     Copyright &copy; 2020. Bookstore Private Limited. All Rights Reserved.
 </footer>

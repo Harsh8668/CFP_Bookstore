@@ -19,7 +19,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-left: 400px;
-    border-radius: 3px;
+    border-radius:3px;
     row-gap: 50px;
     column-gap: 50px;
 }
@@ -32,7 +32,7 @@
 .name1 {
     margin-top: -30px;
     font-weight: 550;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .author {
@@ -72,11 +72,13 @@
 }
 
 .adding {
-    margin-top: 10px;
+    margin-top: 15px;
     background-color: #A03737;
     color: #fafafa;
     height: 30px;
     font-size: 17px;
+    border-radius: 5px;
+    font: normal normal medium 15px/18px Lato;
     cursor: pointer;
 }
 
@@ -84,15 +86,16 @@
     font-size: 20px;
     height: 30px;
     width: 115px;
-    margin-top: 10px;
+    border-radius: 5px;
     background-color: #333232;
+    font: normal normal medium 15px/18px Lato;
     color: #fafafa;
     cursor: pointer;
 }
 
 footer {
     height: 50px;
-    font-size: 20px;
+    font-size: 15px;
     background-color: #2E1D1E;
     color: #ffffff;
     font: normal normal medium 12px/15px Lato;
@@ -108,13 +111,20 @@ footer {
     }
 
     .sorting{
-        margin-left: 10px;
-        border: 1px solid #878787;
+        margin-top: -15px;
+        margin-left: 100px;
+        width: 140px;
+        font-size: 13px;
     }
 
     .book {
         display: table;
-        margin-left: 251px;
+        margin-top: -10px;
+        margin-left: 262px;
         padding-top: 10px;
+    }
+
+    .footer{
+        font-size: 13px;
     }
 }

@@ -21,6 +21,44 @@
     border: 1px solid #DCDCDC;
     border-radius: 1px;
 }
-.remove{
+
+.remove {
     margin-left: 500px;
+}
+
+footer {
+    height: 50px;
+    font-size: 15px;
+    background-color: #2E1D1E;
+    color: #ffffff;
+    font: normal normal medium 12px/15px Lato;
+}
+
+@media (max-width:400px) {
+    .container {
+        width: 390px;
+    }
+
+    .heads {
+        margin-left: 10px;
+    }
+
+    .head1 {
+        margin-left: 35px;
+    }
+
+    .body {
+        margin-top: 40px;
+        width: 370px;
+        margin-left: 10px;
+    }
+
+    .remove {
+        margin-left: 280px;
+    }
+
+    .footer{
+        margin-top: 38px;
+        font-size: 13px;
+    }
 }

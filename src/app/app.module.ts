@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,6 +50,7 @@ import { FilterPipe } from './Pipe/filter.pipe';
     FlexLayoutModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxPaginationModule,  
 
     MatInputModule,
     MatFormFieldModule,
