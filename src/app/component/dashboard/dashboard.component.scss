@@ -1,5 +1,6 @@
 .main {
     background-color: #A03037;
+    // position: fixed;
 }
 
 .img {
@@ -37,4 +38,31 @@
     font: normal normal normal 10px/13px Roboto;
     letter-spacing: 0.45px;
     color: #FFFFFF;
+}
+
+
+@media (max-width:400px) {
+    .container{
+        width: 400px;
+    }
+
+    .img{
+        margin-left: -10px;
+        width: 100px;
+    }
+
+    .text{
+        font-size: 15px;
+    }
+
+    .search{
+        margin-left: 22px;
+        font-size: 10px;
+        width: 100px;
+    }
+
+    .icon{
+        margin-left: -140px;
+    }
+
 }

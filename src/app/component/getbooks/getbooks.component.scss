@@ -97,3 +97,24 @@ footer {
     color: #ffffff;
     font: normal normal medium 12px/15px Lato;
 }
+
+@media (max-width:400px) {
+    .container {
+        width: 150px;
+    }
+
+    .name{
+        margin-left: 250px;
+    }
+
+    .sorting{
+        margin-left: 10px;
+        border: 1px solid #878787;
+    }
+
+    .book {
+        display: table;
+        margin-left: 251px;
+        padding-top: 10px;
+    }
+}

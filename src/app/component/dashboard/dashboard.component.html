@@ -8,12 +8,12 @@
                 <img src="../../../assets/dashboard/education.png">
             </div>
 
-            <div class="text" (click)="home()">
+            <div class="text" (click)="home()" fxHide.xs>
                 <span>Bookstore</span>
             </div>
 
             <div>
-                <input type="text" class="search" placeholder="Search...">
+                <input type="text" class="search" placeholder="Search..."  (keyup)="searchTitle($event)">
             </div>
 
             <div class="icon">
@@ -35,7 +35,7 @@
             </div>
 
 
-            <div class="icon" (click)="myCart();">
+            <div class="icon1" (click)="myCart();">
                 <button class="material-symbols-outlined"
                     style="margin-left:50px;border: none; outline:none;background-color: #A03037;color: #ffffff;cursor: pointer;">
                     shopping_cart

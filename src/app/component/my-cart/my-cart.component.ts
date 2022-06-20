@@ -21,8 +21,6 @@ export class MyCartComponent implements OnInit {
   show = true;
   close = false;
   orders: any = [];
-  orderList: any = [];
-
 
   openSnackBar() {
     this._snackBar.open;
@@ -77,16 +75,6 @@ export class MyCartComponent implements OnInit {
     });
   }
 
-  order() {
-    this.visible = false;
-    this.valid = true;
-  }
-
-  continue() {
-    this.show = true;
-    this.close = true;
-  }
-
   placeOrder() {
     this.orders.forEach((response: any) => {
       this.orders.push({
@@ -103,11 +91,23 @@ export class MyCartComponent implements OnInit {
     }
     this.book.checkout(reqdata).subscribe((response: any) => {
       console.log(response);
+      this._snackBar.open('Order Placed', '', { duration: 2000 });
     })
   }
-  
+
   orderPlace() {
     this.router.navigateByUrl("/home/order")
+  }
+
+
+  order() {
+    this.visible = false;
+    this.valid = true;
+  }
+
+  continue() {
+    this.show = true;
+    this.close = true;
   }
 }
 

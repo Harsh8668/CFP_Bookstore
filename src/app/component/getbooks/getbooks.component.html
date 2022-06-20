@@ -26,7 +26,7 @@
 
         <div class="book">
 
-            <mat-card *ngFor="let book of Books" style="width: 270px;height: 320px;">
+            <mat-card *ngFor="let book of Books | filter: searchWord" style="width: 270px;height: 320px;">
 
                 <div class="img" fxLayoutAlign="center center" style="margin-top:-16px;width:302px;margin-left:-16px">
                     <img src="../../../assets/getBook/Image 13.png">
@@ -64,7 +64,7 @@
                     <button class="adding" (click)="myCart(book)">
                         ADD TO CART
                     </button>
-                
+
                     <button class="wish" (click)="wishlist(book)" style="margin-left: 20px;">
                         WISHLIST
                     </button>
@@ -73,7 +73,3 @@
         </div>
     </div>
 </div>
-
-<footer fxLayoutAlign="center center">
-    Copyright &copy; 2020. Bookstore Private Limited. All Rights Reserved.
-</footer>

@@ -27,6 +27,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatMenuModule} from '@angular/material/menu';
 import { AuthenticationServiceService } from './services/Authentication/authentication-service.service';
+import { FilterPipe } from './Pipe/filter.pipe';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { AuthenticationServiceService } from './services/Authentication/authenti
     GetbooksComponent,
     MyCartComponent,
     OrderComponent,
-    WishlistComponent
+    WishlistComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

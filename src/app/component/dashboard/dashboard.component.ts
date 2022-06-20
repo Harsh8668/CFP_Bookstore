@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,8 +9,9 @@ import { Router } from '@angular/router';
 })
 
 export class DashboardComponent implements OnInit {
+  value:any;
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private data:DataService) { }
 
   ngOnInit(): void {
   }
@@ -29,5 +31,15 @@ export class DashboardComponent implements OnInit {
   Logout(){
     localStorage.removeItem("token")
     this.router.navigateByUrl("/login")
+  }
+
+  searchTitle(event: any) {
+    console.log("input in search field===", event.target.value);
+    this.value = event.target.value
+    let Ddata = {
+      type: 'search',
+      data: [this.value]
+    }
+    this.data.ChangeDataMessage(Ddata)
   }
 }

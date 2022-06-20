@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { BookService } from 'src/app/services/book/book.service';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'app-getbooks',
@@ -9,15 +10,24 @@ import { BookService } from 'src/app/services/book/book.service';
 })
 export class GetbooksComponent implements OnInit {
 Books:any;
+subscription:any;
+message:any;
+searchWord:any;
 
 openSnackBar() {
   this._snackBar.open;
 }
 
-  constructor(private book:BookService,private _snackBar : MatSnackBar) { }
+  constructor(private book:BookService,private _snackBar : MatSnackBar, private data:DataService) { }
   ngOnInit(): void {
    this.getAllBook();
-  }
+   this.subscription = this.data.currentData.subscribe(message => {
+    this.message = message;
+    console.log("display card search data======", message.data[0]);
+    this.searchWord=message.data[0]
+    // this.getAllNotes();
+  })
+}
 
   getAllBook() {
     this.book.getAllBook().subscribe((response: any) => {
