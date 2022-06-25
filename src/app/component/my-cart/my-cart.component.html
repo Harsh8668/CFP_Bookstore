@@ -53,7 +53,7 @@
 
                     <div class="plus">
                         <button>
-                            <span>+</span>
+                            <span>-</span>
                         </button>
                     </div>
 
@@ -65,7 +65,7 @@
 
                     <div class="minus">
                         <button>
-                            <span>-</span>
+                            <span>+</span>
                         </button>
                     </div>
 
@@ -179,7 +179,7 @@
         <div *ngIf="valid">
             <div class="main5" *ngIf="close" style="border: 1px solid white">
                 <mat-card class="card10">
-                    <p class="summary" style="margin-left:12px">Order Summary</p>
+                    <p class="summary" style="margin-left:12px">Order Summary ({{count}})</p>
                     <div *ngFor="let cart of Carts">
                         <div class="img1" style="margin-top:50px;margin-left: 12px;">
                             <img src="../../../assets/getBook/Image 13.png">
@@ -200,6 +200,10 @@
                         <div class="discount" style="margin-top:10px;margin-left: 150px;">
                             <del>Rs. {{cart.product_id.discountPrice}}</del>
                         </div>
+                    </div>
+
+                    <div style="font-size: 20px;margin-left:10px;margin-top:50px">
+                    Total :{{sum}}                         
                     </div>
 
                     <br><br>

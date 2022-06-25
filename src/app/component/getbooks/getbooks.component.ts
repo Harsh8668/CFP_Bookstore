@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { BookService } from 'src/app/services/book/book.service';
 import { DataService } from 'src/app/services/data/data.service';
 
@@ -14,17 +15,19 @@ subscription:any;
 message:any;
 searchWord:any;
 page:number =1;
+show = true;  
+valid = false;
 
 openSnackBar() {
   this._snackBar.open;
 }
 
-  constructor(private book:BookService,private _snackBar : MatSnackBar, private data:DataService) { }
+  constructor(private book:BookService,private _snackBar : MatSnackBar, private data:DataService, private router:Router) { }
   ngOnInit(): void {
    this.getAllBook();
    this.subscription = this.data.currentData.subscribe(message => {
     this.message = message;
-    console.log("display card search data======", message.data[0]);
+    //console.log("display card search data======", message.data[0]);
     this.searchWord=message.data[0]
   })
 }
@@ -36,8 +39,8 @@ openSnackBar() {
     });
   }
 
-  myCart(book:any){
-    this.book.addBookToCart(book._id).subscribe((response:any)=>{
+  myCart(books:any){
+    this.book.addBookToCart(books._id).subscribe((response:any)=>{
       console.log(response);
       this._snackBar.open('Added to Cart', '', { duration: 2000 });
     });
@@ -56,5 +59,10 @@ openSnackBar() {
 
   low(){
     this.Books = this.Books.sort((low: any, high: any) => low.price - high.price);
+  }
+  
+  view(book:any){
+    localStorage.setItem("Bookid",book._id);
+    this.router.navigateByUrl("/home/view")
   }
 }

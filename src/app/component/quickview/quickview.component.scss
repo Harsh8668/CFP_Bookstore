@@ -1,0 +1,306 @@
+.heads {
+    margin-top: 20px;
+    margin-left: 155px;
+}
+
+.head {
+    color: #9D9D9D;
+    font: normal normal normal 12px/16px Roboto;
+}
+
+.head1 {
+    margin-top: -16px;
+    margin-left: 35px;
+    // font: bolder;
+    font: bold 12px/16px Roboto;
+}
+
+.body {
+    width: 300px;
+    height: 280px;
+    margin-top: -90px;
+    margin-left: 160px;
+    // border: 1px solid #D1D1D1;
+    border-radius: 1px;
+}
+
+.img {
+    padding: 20px 20px 30px 20px;
+}
+
+.add {
+    margin-top: 125px;
+    height: 30px;
+    margin-left: -670px;
+    background-color: #A03037;
+    color: #fff;
+    border: none;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.wish {
+    margin-top: 125px;
+    border-radius: 2px;
+    margin-left: -540px;
+    height: 30px;
+    background-color: #333333;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.details {
+    margin-left: 500px;
+    margin-top: -430px;
+}
+
+.name1 {
+    font: normal normal normal 28px/37px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+}
+
+.author {
+    text-align: left;
+    font: normal normal normal 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+    opacity: 1;
+}
+
+
+.star {
+    background-color: #388E3C;
+    width: 40px;
+    height: 20px;
+    padding-left: 5px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.price {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.discount {
+    margin-top: -20px;
+    margin-left: 110px;
+    color: #878787;
+}
+
+.book {
+    margin-top: 20px;
+    margin-left: 500px;
+    color: #878787;
+}
+
+.description {
+    margin-left: 500px;font-size: 20px;
+}
+
+.customer {
+    margin-top: 30px;
+    font-size: 20px;
+    margin-left: 500px;
+    font-weight: 500;
+}
+
+.rating {
+    margin-top: 20px;
+    margin-left: 500px;
+    width: 800px;
+}
+
+.overall {
+    font-size: 10px;
+}
+
+.mark:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.mark {
+    margin-right: 610px;
+    margin-top: 10px;
+}
+
+.mark:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.mark:not(:checked)>label {
+    float: right;
+    width: 1em;
+    margin-bottom: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+
+}
+
+.mark>input:checked~label {
+    color: #ffc700;
+}
+
+.review {
+    margin-top: 20px;
+    width: 750px;
+    height: 80px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border: 1px solid black;
+}
+
+.submit {
+    cursor: pointer;
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    margin-left: 650px;
+    border-radius: 3px;
+    border: 1px solid #ffffff;
+    background-color: #3371B5;
+    color: #ffffff;
+}
+
+.comment {
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+
+.array-div {
+    margin-left: 50px;
+}
+
+
+footer {
+    height: 50px;
+    font-size: 15px;
+    background-color: #2E1D1E;
+    color: #ffffff;
+    font: normal normal medium 12px/15px Lato;
+}
+
+@media (max-width:400px) {
+    .container {
+        width: 390px;
+    }
+
+    .main{
+        width: 390px;
+    }
+
+    .heads {
+        margin-left: 10px;
+    }
+
+    .head1 {
+        margin-left: 35px;
+    }
+
+    .img1{
+        margin-left: -100px;
+    }
+    
+    .img2{
+        margin-left: -100px;
+    }
+    
+    .body{
+        margin-left: 60px;
+    }
+
+    .customer{
+        width: 180px;
+        margin-left: 480px;
+        font-size: 20px;
+    }
+
+    .details{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+
+    .hellos{
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: -450px;   
+    }
+
+    .hello{
+        margin-left: -020px;
+        width: 250px;
+    }
+
+    .description{
+        font-weight: 100;
+        color: #0A0102;
+        font-size: 20px;
+    }
+
+    .feedback{
+        margin-left: -430px;
+        width: 200px;
+    }
+
+    .overall{
+        font-size: 25px;
+    }
+
+    .review{
+        width: 200px;
+    }
+
+    .submit{
+        margin-left: 100px;
+    }
+
+    .mark:not(:checked)>label:before {
+        content: '★ ';
+    }
+    
+    .mark {
+        margin-right: 100px;
+        margin-top: 10px;
+    }
+    
+    .mark:not(:checked)>input {
+        position: absolute;
+        top: -9999px;
+    }
+    
+    .mark:not(:checked)>label {
+        float: right;
+        width: 1em;
+        margin-bottom: 4px;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 30px;
+        color: #ccc;
+    
+    }
+    .mark>input:checked~label {
+        color: #ffc700;
+    }
+    
+    .footer{
+        margin-top: 38px;
+        font-size: 13px;
+    }
+}

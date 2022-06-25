@@ -4,6 +4,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { FormsModule } from '@angular/forms'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,8 +28,10 @@ import {MatTableModule} from '@angular/material/table';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatBadgeModule} from '@angular/material/badge';
 import { AuthenticationServiceService } from './services/Authentication/authentication-service.service';
 import { FilterPipe } from './Pipe/filter.pipe';
+import { QuickviewComponent } from './component/quickview/quickview.component';
 
 
 @NgModule({
@@ -41,7 +44,8 @@ import { FilterPipe } from './Pipe/filter.pipe';
     MyCartComponent,
     OrderComponent,
     WishlistComponent,
-    FilterPipe
+    FilterPipe,
+    QuickviewComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +55,7 @@ import { FilterPipe } from './Pipe/filter.pipe';
     ReactiveFormsModule,
     HttpClientModule,
     NgxPaginationModule,  
+    FormsModule,
 
     MatInputModule,
     MatFormFieldModule,
@@ -62,7 +67,8 @@ import { FilterPipe } from './Pipe/filter.pipe';
     MatTableModule,
     MatSnackBarModule,
     MatRadioModule,
-    MatMenuModule
+    MatMenuModule,
+    MatBadgeModule
   ],
   providers: [
     AuthenticationServiceService

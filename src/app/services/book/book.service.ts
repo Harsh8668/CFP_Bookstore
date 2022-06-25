@@ -122,4 +122,27 @@ export class BookService {
 
     return this.httpService.postService('/add/order', reqdata, true, header)
   }
+
+  feedback(product_id: any, reqdata: any) {
+    
+    let header = {
+      headers: new HttpHeaders({
+        'content-type': 'application/json',
+        'x-access-token': this.token
+      })
+    }
+    return this.httpService.postService('/add/feedback/' + product_id, reqdata, true, header)
+
+  }
+
+  getFeedback(product_id: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'content-type': 'application/json',
+        'x-access-token': this.token
+      })
+    }
+    return this.httpService.getService('/get/feedback/'+ product_id, true, header)
+  }
+  
 }

@@ -6,6 +6,7 @@ import { GetbooksComponent } from './component/getbooks/getbooks.component';
 import { LoginComponent } from './component/login/login.component';
 import { MyCartComponent } from './component/my-cart/my-cart.component';
 import { OrderComponent } from './component/order/order.component';
+import { QuickviewComponent } from './component/quickview/quickview.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { WishlistComponent } from './component/wishlist/wishlist.component';
 
@@ -20,7 +21,8 @@ const routes: Routes = [
       { path: 'getbook', component: GetbooksComponent },
       {path: 'cart', component:MyCartComponent},
       {path: 'order', component:OrderComponent},
-      {path: 'wishlist', component:WishlistComponent}
+      {path: 'wishlist', component:WishlistComponent},
+      {path: 'view', component:QuickviewComponent}
     ]
   },
 

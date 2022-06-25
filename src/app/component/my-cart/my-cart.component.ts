@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { BookService } from 'src/app/services/book/book.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from 'src/app/services/userservice/user.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -21,12 +20,14 @@ export class MyCartComponent implements OnInit {
   show = true;
   close = false;
   orders: any = [];
+  sum:any;
 
   openSnackBar() {
     this._snackBar.open;
   }
 
-  constructor(private book: BookService, private _snackBar: MatSnackBar, private router: Router, private formBuilder: FormBuilder) { }
+  constructor(private book: BookService, private _snackBar: MatSnackBar, private router: Router, private formBuilder: FormBuilder) { 
+  }
 
   ngOnInit(): void {
     this.Cart();
@@ -64,6 +65,10 @@ export class MyCartComponent implements OnInit {
     this.book.getAllCart().subscribe((response: any) => {
       this.Carts = response.result;
       this.count = response.result.length;
+      this.sum = this.Carts.reduce((price1:any, price2:any) => {
+        return price1 + price2.product_id.price;
+      }, 0);
+      console.log("total is : ", this.sum);
       console.log(response);
     });
   }
@@ -90,15 +95,15 @@ export class MyCartComponent implements OnInit {
       "place": this.orders
     }
     this.book.checkout(reqdata).subscribe((response: any) => {
+      this.count = response.result.length;
       console.log(response);
-      this._snackBar.open('Order Placed', '', { duration: 2000 });
     })
   }
 
   orderPlace() {
+    this._snackBar.open('Order Placed', '', { duration: 2000 });
     this.router.navigateByUrl("/home/order")
   }
-
 
   order() {
     this.visible = false;

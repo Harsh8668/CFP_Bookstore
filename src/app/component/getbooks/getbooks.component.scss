@@ -118,10 +118,11 @@ footer {
     }
 
     .book {
-        display: table;
-        margin-top: -10px;
+        // background-color: red;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
         margin-left: 262px;
-        padding-top: 10px;
     }
 
     .footer{
