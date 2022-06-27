@@ -21,6 +21,8 @@ export class MyCartComponent implements OnInit {
   close = false;
   orders: any = [];
   sum:any;
+  quantity:any = 1;
+  i=1;
 
   openSnackBar() {
     this._snackBar.open;
@@ -113,6 +115,20 @@ export class MyCartComponent implements OnInit {
   continue() {
     this.show = true;
     this.close = true;
+  }
+
+  plus(){
+    if(this.i != 20){
+      this.i++;
+      this.quantity = this.i;
+    }
+  }
+
+  minus(){
+    if(this.i != 1){
+      this.i--;
+      this.quantity = this.i;
+    }
   }
 }
 

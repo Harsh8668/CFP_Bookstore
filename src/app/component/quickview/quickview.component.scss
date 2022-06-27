@@ -1,6 +1,6 @@
 .heads {
     margin-top: 20px;
-    margin-left: 155px;
+    margin-left: 205px;
 }
 
 .head {
@@ -17,36 +17,37 @@
 
 .body {
     width: 300px;
-    height: 280px;
-    margin-top: -90px;
-    margin-left: 160px;
-    // border: 1px solid #D1D1D1;
+    margin-top: -105px;
+    margin-left: 300px;
     border-radius: 1px;
 }
 
 .img {
-    padding: 20px 20px 30px 20px;
+    padding: 10px 10px 10px 10px;
 }
 
 .add {
-    margin-top: 125px;
+    margin-top: 25px;
     height: 30px;
-    margin-left: -670px;
+    width: 130px;
+    margin-left: -440px;
     background-color: #A03037;
     color: #fff;
     border: none;
     outline: none;
     border: 1px solid white;
-    border-radius: 2px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .wish {
-    margin-top: 125px;
+    margin-top: 25px;
     border-radius: 2px;
-    margin-left: -540px;
+    width: 130px;
+    margin-left: -320px;
     height: 30px;
     background-color: #333333;
+    border-radius: 5px;
     color: #fff;
     border: none;
     outline: none;
@@ -54,8 +55,8 @@
 }
 
 .details {
-    margin-left: 500px;
-    margin-top: -430px;
+    margin-left: 650px;
+    margin-top: -420px;
 }
 
 .name1 {
@@ -70,8 +71,8 @@
     letter-spacing: 0px;
     color: #878787;
     opacity: 1;
+    margin-top: 10px;
 }
-
 
 .star {
     background-color: #388E3C;
@@ -81,6 +82,16 @@
     margin-top: 10px;
     font-size: 15px;
     color: #ffffff;
+}
+
+.quantity{
+    text-align: left;
+    font: normal normal normal 14px/20px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+    opacity: 1;
+    margin-left: 60px;
+    margin-top: -20px;
 }
 
 .price {
@@ -97,29 +108,36 @@
 
 .book {
     margin-top: 20px;
-    margin-left: 500px;
+    margin-left: 650px;
     color: #878787;
 }
 
 .description {
-    margin-left: 500px;font-size: 20px;
+    margin-left: 650px;
+    font-size: 15px;
+}
+
+.line1{
+    margin-left: 650px;
+    margin-top: 30px;
+    width: 800px;
 }
 
 .customer {
     margin-top: 30px;
     font-size: 20px;
-    margin-left: 500px;
-    font-weight: 500;
+    margin-left: 650px;
+    font-weight: 400;
 }
 
 .rating {
     margin-top: 20px;
-    margin-left: 500px;
-    width: 800px;
+    margin-left: 650px;
+    width: 700px;
 }
 
 .overall {
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .mark:not(:checked)>label:before {
@@ -127,7 +145,7 @@
 }
 
 .mark {
-    margin-right: 610px;
+    margin-right: 510px;
     margin-top: 10px;
 }
 
@@ -154,8 +172,8 @@
 
 .review {
     margin-top: 20px;
-    width: 750px;
-    height: 80px;
+    width: 650px;
+    height: 60px;
     background-color: #fff;
     border: none;
     outline: none;
@@ -167,7 +185,8 @@
     font-size: 15px;
     width: 100px;
     height: 35px;
-    margin-left: 650px;
+    margin-top: 10px;
+    margin-left: 550px;
     border-radius: 3px;
     border: 1px solid #ffffff;
     background-color: #3371B5;
@@ -181,10 +200,9 @@
     opacity: 1;
 }
 
-.array-div {
-    margin-left: 50px;
+.array {
+    margin-left: 80px;
 }
-
 
 footer {
     height: 50px;
@@ -199,75 +217,75 @@ footer {
         width: 390px;
     }
 
-    .main{
-        width: 390px;
-    }
-
     .heads {
-        margin-left: 10px;
-    }
-
-    .head1 {
-        margin-left: 35px;
+        margin-left: 30px;
     }
 
     .img1{
-        margin-left: -100px;
+        margin-left: -240px;
     }
     
     .img2{
-        margin-left: -100px;
+        margin-left: -240px;
     }
     
     .body{
         margin-left: 60px;
     }
 
-    .customer{
-        width: 180px;
-        margin-left: 480px;
-        font-size: 20px;
+    .add{
+        margin-left: 10px;
+    }
+
+    .wish{
+        margin-left: -20px;
     }
 
     .details{
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
         margin-left: 50px;
+        margin-top: 50px;
     }
 
-    .hellos{
-        font-size: 30px;
-        margin-top: 10px;
-        margin-left: -450px;   
-    }
-
-    .hello{
-        margin-left: -020px;
-        width: 250px;
-    }
-
-    .description{
-        font-weight: 100;
-        color: #0A0102;
-        font-size: 20px;
-    }
-
-    .feedback{
-        margin-left: -430px;
-        width: 200px;
-    }
-
-    .overall{
+    .author{
         font-size: 25px;
     }
 
-    .review{
-        width: 200px;
+    .star{
+        font-size: 20px;
+        margin-top: 20px;
     }
 
-    .submit{
-        margin-left: 100px;
+    .discount{
+        font-size: 20px;
+    }
+
+    .book{
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+
+    .description{
+        text-align: start;
+        margin-top: 15px;
+        margin-left: 30px; 
+    }
+
+    .line1{
+        width: 350px;
+        margin-left: 30px;
+    }
+
+    .feedback{
+        margin-left: -620px;
+    }
+
+    .rating{
+        width: 100px;
+        margin-left: 650px;
+    }
+
+    .hello{
+        width: 300px;
     }
 
     .mark:not(:checked)>label:before {
@@ -275,7 +293,7 @@ footer {
     }
     
     .mark {
-        margin-right: 100px;
+        margin-right: 150px;
         margin-top: 10px;
     }
     
@@ -295,12 +313,25 @@ footer {
         color: #ccc;
     
     }
+    
     .mark>input:checked~label {
         color: #ffc700;
     }
     
+
+    .review{
+        width: 280px;
+    }
+
+    .submit{
+        margin-left: 190px;
+    }
+
+    .array{
+        margin-left: 10px;
+    }
+
     .footer{
-        margin-top: 38px;
         font-size: 13px;
     }
 }

@@ -51,19 +51,17 @@
                         <del>Rs. {{cart.product_id.discountPrice}}</del>
                     </div>
 
-                    <div class="plus">
+                    <div class="plus" (click)="minus()">
                         <button>
                             <span>-</span>
                         </button>
                     </div>
 
                     <div class="number">
-                        <button style="background-color: white;border:none">
-                            <span>1</span>
-                        </button>
+                        <input type="text" [value]="quantity"  style="width: 15px;">
                     </div>
 
-                    <div class="minus">
+                    <div class="minus" (click)="plus()">
                         <button>
                             <span>+</span>
                         </button>

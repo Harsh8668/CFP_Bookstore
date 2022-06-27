@@ -46,7 +46,7 @@ export class QuickviewComponent implements OnInit {
 
   getFeedback() {
     this.book.getFeedback(this.Bookid).subscribe((response: any) => {
-      console.log("get feedback", response);
+      console.log(response);
       this.feedbackArray = response.result;
     })
   }

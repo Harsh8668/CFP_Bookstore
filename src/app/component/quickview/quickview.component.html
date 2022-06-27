@@ -6,6 +6,7 @@
     <div class="main">
 
         <div class="heads">
+
             <div class="head">
                 <span routerLink="/home/getbook">Home</span>
             </div>
@@ -14,41 +15,49 @@
                 / Book(01)
             </div>
         </div>
+
         <div class="img1">
             <img src="../../../assets/getBook/Image 13@2x.png"
-                style="width:25px;margin-left: 120px;border: 2px solid #A03737;margin-top: 70px;">
+                style="width:30px;margin-left: 264px;border: 2px solid #A03737;margin-top: 30px;">
         </div>
 
         <div class="img2">
-            <img src="../../../assets/getBook/Image 13@2x.png" style="width:25px;margin-left: 120px;">
+            <img src="../../../assets/getBook/Image 13@2x.png" style="width:30px;margin-left: 264px;margin-top: 2px;">
         </div>
+
         <div class="body">
+
             <mat-card>
                 <div class="img">
-                    <img src="../../../assets/getBook/Image 13@2x.png"
-                        style="width:220px;height:300px;border: 1px solid black;">
+                    <img src="../../../assets/getBook/Image 13@2x.png" style="width:240px;height:320px;;">
                 </div>
             </mat-card>
+
         </div>
 
         <div fxLayoutAlign="center center" fxLayoutGap="20px">
+
             <div>
-                <button class="add" mat-button style="width: 130px;">ADD TO BAG</button>
+                <button class="add" mat-button >ADD TO BAG</button>
             </div>
 
             <div class="heart">
+
                 <span class="material-symbols-outlined"
                     style="color:#fff;font-size: 20px;margin-top: 30px;position:absolute;margin-left: -450px;">
                     favorite
                 </span>
+
             </div>
 
             <div>
-                <button class="wish" mat-button style="width: 130px;">WISHLIST</button>
+                <button class="wish" mat-button >WISHLIST</button>
             </div>
+
         </div>
 
         <div class="details">
+
             <div class="name1">
                 {{Books?.bookName}}
             </div>
@@ -63,10 +72,10 @@
                     grade
                 </span>
 
-                <!-- <div class="quantity">
-                    ({{Books?.quantity}})
-                </div> -->
+            </div>
 
+            <div class="quantity">
+                ({{Books?.quantity}})
             </div>
 
             <div class="price">
@@ -77,40 +86,44 @@
                 <del>Rs. {{Books?.discountPrice}}</del>
             </div>
 
-            <div fxHide.xs="Hide"> 
+            <div fxHide.xs="Hide">
                 <hr class="line" style="width: 800px;margin-top: 30px;margin-left: 0px;">
             </div>
+
         </div>
 
-        <div class="hellos">
+        <div class="Book_details">
+
             <div class="book">
                 <p>Book Details</p>
             </div>
 
-            <div class="description" style="margin-left: 500px;">
+            <div class="description" >
                 {{Books?.description}}
             </div>
 
-            <div fxHide.xs>
-                <hr class="line" style="width: 800px;margin-top: 30px;margin-left: 500px;">
+            <div>
+                <hr class="line1">
             </div>
+
         </div>
 
         <div class="feedback">
+
             <div class="customer">
                 <p>Customer Feedback</p>
             </div>
 
             <div class="rating">
-                <mat-card class="hello" style="height: 200px;">
+                <mat-card class="hello" >
+
                     <div class="overall">
                         <p>Overall rating</p>
                     </div>
 
-                    <div class="mark">
+                     <div class="mark">
                         <input type="radio" id="star5" name="rate" [(ngModel)]="value" value="5" />
                         <label for="star5" title="Extremely Good ">5 stars</label>
-
 
                         <input type="radio" id="star4" name="rate" [(ngModel)]="value" value="4" />
                         <label for="star4" title="Very Good ">4 stars</label>
@@ -125,26 +138,39 @@
                         <label for="star1" title="Bad">1 star</label>
                     </div>
 
-                    <div >
-                        <textarea class="review" [(ngModel)]="review"placeholder="Write your review..."></textarea>
+                    <div>
+                        <textarea class="review" [(ngModel)]="review" placeholder="Write your review..."></textarea>
                     </div>
 
                     <div>
                         <button class="submit" mat-button (click)="feedback()">Submit</button>
                     </div>
+
                 </mat-card>
 
-                <div *ngFor='let feedback of feedbackArray'>
-                    <div style="margin-top:10px"><b>{{feedback.user_id.fullName}}</b></div>
-                    <div>{{feedback.rating}}
+                <div class="array" *ngFor='let feedback of feedbackArray'>
+                    <div style="margin-top:10px">
+                        <b>{{feedback.user_id.fullName}}</b>
                     </div>
-                    <div class="comment">{{feedback.comment}}</div>
+
+                    <div>
+                        {{feedback.rating}}
+                    </div>
+
+                    <div class="comment">
+                        {{feedback.comment}}
+                    </div> 
+
                 </div>
-            </div>
+
+            </div> 
+
         </div>
+
     </div>
+
 </div>
-<br>
+
 <footer class="footer" fxLayoutAlign="center center">
     <p>Copyright &copy; 2020, Bookstore Private Limited. All Rights Reserved</p>
 </footer>
