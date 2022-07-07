@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build",
+    "build": "ng build configuar",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "heroku-postbuild": "ng build"
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
