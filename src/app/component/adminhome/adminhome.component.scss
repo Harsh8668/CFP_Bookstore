@@ -1,0 +1,116 @@
+.name{
+    background-color:black;
+    color: white;
+    font-size: 32px;
+    height: 50px;
+}
+
+.continue{
+    font-size: 15px;
+    width: 110px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 1400px;
+    font: Lat;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.image{
+    width: 100px;
+    height: 150px;
+}
+
+td, th{
+    border: 1px solid black;
+}
+
+.table{
+    border: 1px solid black;
+}
+
+.update, .delete {
+    font-size: 15px;
+    width: 40px;
+    height: 35px;
+    font: Lat;
+    color: red;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: white;
+    border: 1px solid white;
+    margin-left: -35px;
+}
+
+
+
+
+.main2 {
+    background-color: #A03037;
+}
+
+.img {
+    margin-left: -30px;
+    margin-top: 10px;
+}
+
+.text {
+    color: #ffffff;
+    text-align: left;
+    font: normal normal normal 20px Roboto;
+}
+
+.search {
+    margin-left: 130px;
+    width: 550px;
+    height: 30px;
+    background: #FCFCFC;
+    border-radius: 3px;
+    opacity: 1;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.cart {
+    cursor: pointer;
+    font: normal normal normal 10px/13px Roboto;
+    letter-spacing: 0.45px;
+    color: #FFFFFF;
+}
+
+.wish {
+    cursor: pointer;
+    font: normal normal normal 10px/13px Roboto;
+    letter-spacing: 0.45px;
+    color: #FFFFFF;
+}
+
+
+@media (max-width:400px) {
+    .container1{
+        width: 390px;
+    }
+
+    .img{
+        margin-left: 15px;
+        width: 100px;
+    }
+
+    .text{
+        font-size: 15px;
+    }
+
+    .search{
+        margin-left: 22px;
+        font-size: 10px;
+        width: 150px;
+    }
+
+    .icon{
+        margin-left: -180px;
+    }
+
+}

@@ -1,11 +1,11 @@
 <div class="main" fxLayout="row" fxLayoutAlign="center center">
     <mat-card class="card1" fxHide.xs>
         <img class="img1" src="../../../assets/login/2766594.png" style="margin-top: 30px;">
-       
+
         <div class="text1">
             <h2>ONLINE BOOK SHOPPING</h2>
         </div>
-        
+
     </mat-card>
     <mat-card class="card2">
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -37,13 +37,12 @@
                         Login
                     </button>
                     <div style="margin-top:5px;margin-left: -150px;cursor: pointer;">
-                        <p routerLink="/alogin">For Admin,click here</p>
+                        <p routerLink="/login">For Users,click here</p>
                     </div>
                 </div>
 
-
                 <div style="margin-top: 12px;">
-                    <button class="login" routerLink="/login">
+                    <button class="login" routerLink="/alogin">
                         LOGIN
                     </button>
                 </div>
@@ -53,19 +52,19 @@
                 </div>
 
                 <div>
-                    <button class="facebook" routerLink="/signup">
+                    <button class="facebook" routerLink="/asignup">
                         Facebook
                     </button>
                 </div>
 
                 <div>
-                    <button class="google" routerLink="/signup">
+                    <button class="google" routerLink="/asignup">
                         Google
                     </button>
                 </div>
 
                 <div>
-                    <button class="Signup" routerLink="/signup">
+                    <button class="Signup" routerLink="/asignup">
                         SIGNUP
                     </button>
                 </div>

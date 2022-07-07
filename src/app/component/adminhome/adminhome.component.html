@@ -1,0 +1,82 @@
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<div class="container">
+    <div class="main">
+        <div class="container1">
+            <mat-toolbar class="main2">
+                <mat-toolbar-row fxLayoutAlign="center center">
+
+                    <div class="img">
+                        <img src="../../../assets/dashboard/education.png">
+                    </div>
+
+                    <div class="text" fxHide.xs>
+                        <span>Bookstore</span>
+                    </div>
+
+                    <div>
+                        <input type="text" class="search" placeholder="Search...">
+                    </div>
+
+                    <div class="icon">
+                        <button class="material-symbols-outlined"
+                            style="margin-left:150px;border: none; outline:none;background-color: #A03037;color: #ffffff;cursor: pointer;">
+                            person
+                            <div class="wish">
+                                <button mat-button
+                                    style="border: none; outline:none;background-color: #a03737;color: #ffffff;cursor: pointer;">profile</button>
+                            </div>
+                        </button>
+                    </div>
+
+
+                    <div class="icon1">
+                        <button class="material-symbols-outlined" matBadgeOverlap="true" matBadgeColor="warn"
+                            style="margin-left:50px;border: none; outline:none;background-color: #A03037;color: #ffffff;cursor: pointer;">
+                            shopping_cart
+
+                            <div class="cart">cart</div>
+                        </button>
+                    </div>
+
+                </mat-toolbar-row>
+            </mat-toolbar>
+        </div>
+
+        <div class="add">
+            <button class="continue" mat-button>Add Books</button>
+        </div>
+
+        <br><br>
+
+        <div class="table">
+            <table class="table1" style="width:100%">
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <!-- <th>Description</th> -->
+                    <th>Author</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Discount Price</th>
+                    <th>Operations</th>
+                </tr>
+                <tr *ngFor="let book of Books" style="text-align: center;">
+                    <td><img class="image" src="../../../assets/getBook/Image 13@2x.png"></td>
+                    <td>{{book.bookName}}</td>
+                    <!-- <td>{{book.description}}</td> -->
+                    <td>{{book.author}}</td>
+                    <td>{{book.quantity}}</td>
+                    <td>{{book.price}}</td>
+                    <td>{{book.discountPrice}}</td>
+                    <td>
+                        <button mat-button class="update">Update</button>
+                        <button mat-button class="delete" style="margin-left: 50px;">Delete</button>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>

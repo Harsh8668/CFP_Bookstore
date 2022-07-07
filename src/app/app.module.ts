@@ -32,6 +32,9 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { AuthenticationServiceService } from './services/Authentication/authentication-service.service';
 import { FilterPipe } from './Pipe/filter.pipe';
 import { QuickviewComponent } from './component/quickview/quickview.component';
+import { AdminLoginComponent } from './component/admin-login/admin-login.component';
+import { AdminSignupComponent } from './component/admin-signup/admin-signup.component';
+import { AdminhomeComponent } from './component/adminhome/adminhome.component';
 
 
 @NgModule({
@@ -45,7 +48,10 @@ import { QuickviewComponent } from './component/quickview/quickview.component';
     OrderComponent,
     WishlistComponent,
     FilterPipe,
-    QuickviewComponent
+    QuickviewComponent,
+    AdminLoginComponent,
+    AdminSignupComponent,
+    AdminhomeComponent
   ],
   imports: [
     BrowserModule,

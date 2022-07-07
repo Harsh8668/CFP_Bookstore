@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationGuard } from './authentication.guard';
+import { AdminLoginComponent } from './component/admin-login/admin-login.component';
+import { AdminSignupComponent } from './component/admin-signup/admin-signup.component';
+import { AdminhomeComponent } from './component/adminhome/adminhome.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { GetbooksComponent } from './component/getbooks/getbooks.component';
 import { LoginComponent } from './component/login/login.component';
@@ -25,7 +28,9 @@ const routes: Routes = [
       {path: 'view', component:QuickviewComponent}
     ]
   },
-
+  {path: 'alogin', component:AdminLoginComponent},
+  {path:'asignup', component:AdminSignupComponent},
+  {path:'dashboard', component:AdminhomeComponent}
 ];
 
 @NgModule({

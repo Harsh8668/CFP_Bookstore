@@ -121,7 +121,7 @@ export class MyCartComponent implements OnInit {
     if(this.i != 20){
       this.i++;
       this.quantity = this.i;
-    }
+    } 
   }
 
   minus(){

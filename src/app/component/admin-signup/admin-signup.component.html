@@ -1,0 +1,70 @@
+<div class="main" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="card1" fxHide.xs>
+        <img class="img1" src="../../../assets/login/2766594.png" style="margin-top: 30px;">
+        <div class="text1">
+            <h2>ONLINE BOOK SHOPPING</h2>
+        </div>
+    </mat-card>
+    <mat-card class="card2">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row">
+            <div class="name">
+                <p>
+                    <mat-form-field appearance="outline" style="width:250px">
+                        <mat-label>Full Name</mat-label>
+                        <input matInput placeholder="Name" formControlName="fullName">
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <div class="email">
+                <p>
+                    <mat-form-field appearance="outline" style="width:250px">
+                        <mat-label>Email Id</mat-label>
+                        <input matInput placeholder="Email" formControlName="email">
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <div class="password">
+                <p>
+                    <mat-form-field appearance="outline" style="width:250px">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" formControlName="password">
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <div class="number">
+                <p>
+                    <mat-form-field appearance="outline" style="width:250px">
+                        <mat-label>Mobile Number</mat-label>
+                        <input matInput placeholder="Number" formControlName="phone">
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <div>
+                <button class="signup1">
+                    Signup
+                </button>
+                <div style="margin-top:5px;margin-left: -180px;cursor: pointer;">
+                    <p routerLink="/signup">For Users,click here</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 12px;">
+                <button class="login" routerLink="/alogin">
+                    LOGIN
+                </button>
+            </div>
+
+            <div style="margin-top:10px;">
+                <button class="Signup" routerLink="/asignup">
+                    SIGNUP
+                </button>
+            </div>
+        </div>
+        </form>
+    </mat-card>
+</div>

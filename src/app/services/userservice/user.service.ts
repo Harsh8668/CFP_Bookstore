@@ -19,7 +19,7 @@ export class UserService {
         'Content-Type': 'application/json'
       })
     }
-    return this.httpService.postService('/registration', reqData, false, header)
+    return this.httpService.postService('bookstore_user/registration', reqData, false, header)
   }
 
   login(reqData: any) {
@@ -29,8 +29,26 @@ export class UserService {
         'Content-Type': 'application/json'
       })
     }
-    return this.httpService.postService('/login', reqData, false, header)
+    return this.httpService.postService('bookstore_user/login', reqData, false, header)
   }
 
-  
+  alogin(reqData: any) {
+
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+    return this.httpService.postService('/bookstore_user/admin/login', reqData, false, header)
+  }
+
+  aregistration(reqData: any) {
+
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+    return this.httpService.postService('bookstore_user/admin/registration', reqData, false, header)
+  }
 }

@@ -22,7 +22,7 @@ export class BookService {
       })
     }
 
-    return this.httpService.getService('/get/book', true, header)
+    return this.httpService.getService('bookstore_user/get/book', true, header)
   }
 
   addBookToCart(_id: any) {
@@ -35,7 +35,7 @@ export class BookService {
       })
     }
 
-    return this.httpService.postService('/add_cart_item/' + _id, {}, true, header)
+    return this.httpService.postService('bookstore_user/add_cart_item/' + _id, {}, true, header)
   }
 
   getAllCart() {
@@ -48,7 +48,7 @@ export class BookService {
       })
     }
 
-    return this.httpService.getService('/get_cart_items', true, header)
+    return this.httpService.getService('bookstore_user/get_cart_items', true, header)
   }
 
   removeFromCart(_id: any) {
@@ -61,7 +61,7 @@ export class BookService {
       })
     }
 
-    return this.httpService.deleteService('/remove_cart_item/' + _id, {}, true, header)
+    return this.httpService.deleteService('bookstore_user/remove_cart_item/' + _id, {}, true, header)
   }
 
   userAddress(reqdata:any) {
@@ -71,7 +71,7 @@ export class BookService {
         'x-access-token': this.token
       })
     }
-    return this.httpService.putService('/edit_user', reqdata, true, header)
+    return this.httpService.putService('bookstore_user/edit_user', reqdata, true, header)
   }
 
   addBookTowishlist(_id: any) {
@@ -84,7 +84,7 @@ export class BookService {
       })
     }
 
-    return this.httpService.postService('/add_wish_list/' + _id, {}, true, header)
+    return this.httpService.postService('bookstore_user/add_wish_list/' + _id, {}, true, header)
   }
 
   getMyWishlist() {
@@ -97,7 +97,7 @@ export class BookService {
       })
     }
 
-    return this.httpService.getService('/get_wishlist_items', true, header)
+    return this.httpService.getService('bookstore_user/get_wishlist_items', true, header)
   }
 
   removeFromWishlist(_id: any) {
@@ -107,7 +107,7 @@ export class BookService {
         'x-access-token': this.token    
       })
     }
-    return this.httpService.deleteService('/remove_wishlist_item/' + _id, {} ,true,header)
+    return this.httpService.deleteService('bookstore_user/remove_wishlist_item/' + _id, {} ,true,header)
   }
 
   checkout(reqdata: any) {
@@ -120,7 +120,7 @@ export class BookService {
       })
     }
 
-    return this.httpService.postService('/add/order', reqdata, true, header)
+    return this.httpService.postService('bookstore_user/add/order', reqdata, true, header)
   }
 
   feedback(product_id: any, reqdata: any) {
@@ -131,7 +131,7 @@ export class BookService {
         'x-access-token': this.token
       })
     }
-    return this.httpService.postService('/add/feedback/' + product_id, reqdata, true, header)
+    return this.httpService.postService('bookstore_user/add/feedback/' + product_id, reqdata, true, header)
 
   }
 
@@ -142,7 +142,7 @@ export class BookService {
         'x-access-token': this.token
       })
     }
-    return this.httpService.getService('/get/feedback/'+ product_id, true, header)
+    return this.httpService.getService('bookstore_user/get/feedback/'+ product_id, true, header)
   }
   
 }
