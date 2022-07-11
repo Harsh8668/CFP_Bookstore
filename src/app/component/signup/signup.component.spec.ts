@@ -4,6 +4,7 @@ import { SignupComponent } from './signup.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 describe('SignupComponent', () => {
@@ -12,7 +13,7 @@ describe('SignupComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule, HttpClientModule],
+      imports: [ReactiveFormsModule, HttpClientModule, MatSnackBarModule],
       declarations: [ SignupComponent ]
     })
     .compileComponents();

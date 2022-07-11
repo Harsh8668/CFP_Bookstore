@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 describe('AdminLoginComponent', () => {
   let component: AdminLoginComponent;
@@ -12,7 +14,7 @@ describe('AdminLoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule, FormsModule,RouterTestingModule, HttpClientTestingModule],
+      imports: [ReactiveFormsModule, FormsModule,RouterTestingModule, HttpClientTestingModule, MatSnackBarModule],
       declarations: [ AdminLoginComponent ]
     })
     .compileComponents();

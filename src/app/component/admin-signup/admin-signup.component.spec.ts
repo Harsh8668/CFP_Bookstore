@@ -1,6 +1,7 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AdminSignupComponent } from './admin-signup.component';
@@ -12,7 +13,7 @@ describe('AdminSignupComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule, ReactiveFormsModule, FormsModule, HttpClientTestingModule],
+        RouterTestingModule, ReactiveFormsModule, FormsModule, HttpClientTestingModule, MatSnackBarModule],
       declarations: [ AdminSignupComponent ]
     })
     .compileComponents();
