@@ -39,6 +39,7 @@ describe('GetbooksComponent', () => {
     fixture.whenStable().then(() => {
       expect(component.low).toHaveBeenCalled();
     });
+    
   }));
 
   it('should render title in a h3 tag', () => {
