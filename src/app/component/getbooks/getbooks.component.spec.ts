@@ -39,10 +39,10 @@ describe('GetbooksComponent', () => {
     fixture.whenStable().then(() => {
       expect(component.low).toHaveBeenCalled();
     });
-    
+
   }));
 
-  it('should render title in a h3 tag', () => {
+  it('should render class in a name class', () => {
     const fixture = TestBed.createComponent(GetbooksComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;

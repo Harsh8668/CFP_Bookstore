@@ -32,14 +32,14 @@ describe('DashboardComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render title in a h3 tag', () => {
+  it('should render name in a span tag', () => {
     const fixture = TestBed.createComponent(DashboardComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('span').textContent).toContain('Bookstore');
   });
 
-  it('should render title in a h3 tag', () => {
+  it('should render class in a cart class', () => {
     const fixture = TestBed.createComponent(DashboardComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
